@@ -1,4 +1,4 @@
-# env
+# read-env
 
 Load environment variables from a dotenv-style file into the current shell.
 
@@ -34,7 +34,7 @@ TOKEN='abc=def'
 ## Install (Sheldon)
 
 ```toml
-[plugins.env]
+[plugins.read-env]
 github = "dbarjs/zsh"
-dir = "plugins/env"
+dir = "plugins/read-env"
 ```

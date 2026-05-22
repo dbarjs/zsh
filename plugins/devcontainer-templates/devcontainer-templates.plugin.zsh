@@ -1,6 +1,6 @@
-# devcontainer — apply devcontainer templates from a registry
+# devcontainer-templates — apply devcontainer templates from a registry
 # Requires the devcontainers CLI (invoked via `npx @devcontainers/cli`).
-# See: plugins/devcontainer/README.md
+# See: plugins/devcontainer-templates/README.md
 
 # Apply a devcontainer template by name from ghcr.io/dbarjs/devcontainer-templates.
 apply_devcontainer_template() {

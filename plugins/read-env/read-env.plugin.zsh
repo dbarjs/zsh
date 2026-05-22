@@ -1,6 +1,6 @@
-# env — load environment variables from a dotenv-style file
+# read-env — load environment variables from a dotenv-style file
 # Provides `read_env [path]`; nothing is loaded automatically.
-# See: plugins/env/README.md
+# See: plugins/read-env/README.md
 
 # Read KEY=VALUE pairs from a file (default: .env) and export them.
 # Supports: blank/`#`-comment lines, an optional `export ` prefix,
