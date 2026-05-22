@@ -1,4 +1,4 @@
-# node
+# ni-aliases
 
 Short aliases over [antfu's `ni`](https://github.com/antfu/ni) — package-manager-agnostic
 wrappers that detect npm / yarn / pnpm / bun automatically.
@@ -35,7 +35,7 @@ npm i -g @antfu/ni
 ## Install (Sheldon)
 
 ```toml
-[plugins.node]
+[plugins.ni-aliases]
 github = "dbarjs/zsh"
-dir = "plugins/node"
+dir = "plugins/ni-aliases"
 ```

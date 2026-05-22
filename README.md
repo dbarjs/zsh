@@ -10,11 +10,11 @@ can enable exactly the ones you want and skip the rest.
 
 | Plugin | Concern |
 |---|---|
-| [`git`](plugins/git/README.md) | Short aliases for everyday git commands. |
-| [`node`](plugins/node/README.md) | Aliases over antfu's `ni` / `nr` tools. |
-| [`history`](plugins/history/README.md) | zsh command history configuration. |
-| [`env`](plugins/env/README.md) | `read_env` — load variables from a dotenv file. |
-| [`devcontainer`](plugins/devcontainer/README.md) | Apply devcontainer templates from a registry. |
+| [`git-aliases`](plugins/git-aliases/README.md) | Short aliases for everyday git commands. |
+| [`ni-aliases`](plugins/ni-aliases/README.md) | Aliases over antfu's `ni` / `nr` tools. |
+| [`history-config`](plugins/history-config/README.md) | zsh command history configuration. |
+| [`read-env`](plugins/read-env/README.md) | `read_env` — load variables from a dotenv file. |
+| [`devcontainer-templates`](plugins/devcontainer-templates/README.md) | Apply devcontainer templates from a registry. |
 | [`window-title`](plugins/window-title/README.md) | Sync the terminal title with the shell. |
 
 ## Install with Sheldon
@@ -24,13 +24,13 @@ so a `dir` pointing at the plugin directory is all you need:
 
 ```toml
 # granular — enable only what you want
-[plugins.git]
+[plugins.git-aliases]
 github = "dbarjs/zsh"
-dir = "plugins/git"
+dir = "plugins/git-aliases"
 
-[plugins.env]
+[plugins.read-env]
 github = "dbarjs/zsh"
-dir = "plugins/env"
+dir = "plugins/read-env"
 
 # ...or load everything in one entry
 [plugins.dbarjs-zsh]
@@ -49,6 +49,8 @@ docs/adr/                          architecture decision records
 CONTEXT.md                         glossary of project terms
 ```
 
-See [`CONTEXT.md`](CONTEXT.md) for terminology and
+See [`CONTEXT.md`](CONTEXT.md) for terminology,
 [`docs/adr/0001-monorepo-of-independent-plugins.md`](docs/adr/0001-monorepo-of-independent-plugins.md)
-for why the repo is structured this way.
+for why the repo is structured this way, and
+[`docs/adr/0002-plugin-names-are-behavior-noun-phrases.md`](docs/adr/0002-plugin-names-are-behavior-noun-phrases.md)
+for why plugins are named the way they are.

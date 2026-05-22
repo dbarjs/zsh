@@ -1,4 +1,4 @@
-# history
+# history-config
 
 zsh command history configuration.
 
@@ -14,7 +14,7 @@ zsh command history configuration.
 ## Install (Sheldon)
 
 ```toml
-[plugins.history]
+[plugins.history-config]
 github = "dbarjs/zsh"
-dir = "plugins/history"
+dir = "plugins/history-config"
 ```

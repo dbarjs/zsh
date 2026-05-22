@@ -1,4 +1,4 @@
-# devcontainer
+# devcontainer-templates
 
 Apply [devcontainer](https://containers.dev/) templates from a registry with a single command.
 
@@ -21,7 +21,7 @@ Templates are pulled from `ghcr.io/dbarjs/devcontainer-templates/<template-name>
 ## Install (Sheldon)
 
 ```toml
-[plugins.devcontainer]
+[plugins.devcontainer-templates]
 github = "dbarjs/zsh"
-dir = "plugins/devcontainer"
+dir = "plugins/devcontainer-templates"
 ```

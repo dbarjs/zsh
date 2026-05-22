@@ -1,4 +1,4 @@
-# git
+# git-aliases
 
 Short aliases for everyday git commands.
 
@@ -16,7 +16,7 @@ Short aliases for everyday git commands.
 ## Install (Sheldon)
 
 ```toml
-[plugins.git]
+[plugins.git-aliases]
 github = "dbarjs/zsh"
-dir = "plugins/git"
+dir = "plugins/git-aliases"
 ```

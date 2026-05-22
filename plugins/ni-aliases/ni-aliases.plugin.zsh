@@ -1,6 +1,6 @@
-# node — aliases over antfu's `ni` / `nr` package-manager-agnostic tools
+# ni-aliases — aliases over antfu's `ni` / `nr` package-manager-agnostic tools
 # Requires @antfu/ni: npm i -g @antfu/ni
-# See: plugins/node/README.md
+# See: plugins/ni-aliases/README.md
 
 alias nio="ni --prefer-offline"
 alias s="nr start"
