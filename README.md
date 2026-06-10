@@ -11,6 +11,7 @@ can enable exactly the ones you want and skip the rest.
 | Plugin | Concern |
 |---|---|
 | [`git-aliases`](plugins/git-aliases/README.md) | Short aliases for everyday git commands. |
+| [`claude-aliases`](plugins/claude-aliases/README.md) | Short aliases for the Claude Code CLI. |
 | [`ni-aliases`](plugins/ni-aliases/README.md) | Aliases over antfu's `ni` / `nr` tools. |
 | [`history-config`](plugins/history-config/README.md) | zsh command history configuration. |
 | [`read-env`](plugins/read-env/README.md) | `read_env` — load variables from a dotenv file. |
