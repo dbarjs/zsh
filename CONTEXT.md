@@ -22,3 +22,12 @@ The [Rust zsh plugin manager](https://sheldon.cli.rs/) that consumes this repo. 
 declare plugins in a `plugins.toml` file; Sheldon fetches them and generates the source
 lines for `.zshrc`. This repo's file layout (`plugins/<name>/<name>.plugin.zsh`) is chosen
 to match Sheldon's default `match` templates.
+
+## Plugin registry
+
+The shell-local array `DBARJS_ZSH_PLUGINS` listing every plugin from this repo loaded in
+the current zsh session. Each plugin appends its own name to the registry on load; querying
+it (e.g. `print -l $DBARJS_ZSH_PLUGINS`) answers "which dbarjs/zsh plugins are currently
+active?". The registry is project-scoped — only plugins from this repo populate it.
+
+_Avoid_ calling it a "manifest", "list", or "register" — it is the **registry**.

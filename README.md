@@ -40,6 +40,18 @@ use = ["plugins/*/*.plugin.zsh"]
 
 Then run `sheldon lock` and make sure `eval "$(sheldon source)"` is in your `.zshrc`.
 
+## Inspect what's loaded
+
+Each plugin from this repo appends its name to `$DBARJS_ZSH_PLUGINS` on load. List the
+dbarjs/zsh plugins active in your current shell with:
+
+```sh
+print -l $DBARJS_ZSH_PLUGINS
+```
+
+The array is project-scoped — only plugins from this repo populate it, so unrelated
+Sheldon plugins won't appear.
+
 ## Repository layout
 
 ```
@@ -51,6 +63,8 @@ CONTEXT.md                         glossary of project terms
 
 See [`CONTEXT.md`](CONTEXT.md) for terminology,
 [`docs/adr/0001-monorepo-of-independent-plugins.md`](docs/adr/0001-monorepo-of-independent-plugins.md)
-for why the repo is structured this way, and
+for why the repo is structured this way,
 [`docs/adr/0002-plugin-names-are-behavior-noun-phrases.md`](docs/adr/0002-plugin-names-are-behavior-noun-phrases.md)
-for why plugins are named the way they are.
+for why plugins are named the way they are, and
+[`docs/adr/0003-plugin-registry-as-shared-shell-array.md`](docs/adr/0003-plugin-registry-as-shared-shell-array.md)
+for how `$DBARJS_ZSH_PLUGINS` works.

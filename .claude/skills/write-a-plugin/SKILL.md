@@ -6,7 +6,8 @@ description: Scaffold a new zsh plugin in the dbarjs/zsh monorepo following the 
 # Write a plugin
 
 Scaffolds one plugin in `plugins/<name>/` for the dbarjs/zsh repo. Read
-`CONTEXT.md` and `docs/adr/0001-*` + `docs/adr/0002-*` before scaffolding.
+`CONTEXT.md` and `docs/adr/0001-*`, `docs/adr/0002-*`, `docs/adr/0003-*`
+before scaffolding.
 
 ## Checklist
 
@@ -17,7 +18,9 @@ Scaffolds one plugin in `plugins/<name>/` for the dbarjs/zsh repo. Read
    `window-title`). Reject subject names like `node`/`env`. (ADR-0002)
 3. **Scaffold** `plugins/<name>/<name>.plugin.zsh` and `plugins/<name>/README.md`.
 4. **Wire** the new plugin into the `## Plugins` table in root `README.md`.
-5. **Lint** with `zsh -n plugins/<name>/<name>.plugin.zsh` (same check as
+5. **Include the registry line.** Every entry file appends to
+   `$DBARJS_ZSH_PLUGINS` — see "Plugin registry line" below. (ADR-0003)
+6. **Lint** with `zsh -n plugins/<name>/<name>.plugin.zsh` (same check as
    `.github/workflows/lint.yml`).
 
 ## Entry-file header
@@ -31,6 +34,19 @@ Two lines, matching `plugins/git-aliases/git-aliases.plugin.zsh` and
 If the plugin defines a public function (like `read_env`), add a third line
 describing what it provides and whether it auto-runs — see
 `plugins/read-env/read-env.plugin.zsh`.
+
+## Plugin registry line (mandatory)
+
+Immediately after the header comment block, before any executable line, every
+plugin must include the registration line. It is byte-identical across all
+plugins — copy it verbatim. (ADR-0003, CONTEXT.md "Plugin registry")
+
+    # Register in $DBARJS_ZSH_PLUGINS — see docs/adr/0003-plugin-registry-as-shared-shell-array.md
+    typeset -gaU DBARJS_ZSH_PLUGINS; DBARJS_ZSH_PLUGINS+=(${${0:A:h}:t})
+
+Do not hardcode the plugin name — the `${${0:A:h}:t}` expansion derives it
+from the directory the file lives in, keeping the directory name as the
+single source of truth.
 
 ## README skeleton
 

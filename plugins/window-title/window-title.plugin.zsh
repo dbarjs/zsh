@@ -2,6 +2,9 @@
 # Idle: shows the current directory. Running: shows the command.
 # See: plugins/window-title/README.md
 
+# Register in $DBARJS_ZSH_PLUGINS — see docs/adr/0003-plugin-registry-as-shared-shell-array.md
+typeset -gaU DBARJS_ZSH_PLUGINS; DBARJS_ZSH_PLUGINS+=(${${0:A:h}:t})
+
 autoload -Uz add-zsh-hook
 
 _window_title_precmd()  { print -Pn '\e]0;%~\a'; }
