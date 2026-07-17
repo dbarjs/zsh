@@ -13,6 +13,10 @@ Requires the `claude` binary on your `PATH`.
 | `ccd` | `claude --dangerously-skip-permissions` |
 | `ccr` | `claude --resume` |
 
+The `cc*` family continues in
+[`claude-session-names`](../claude-session-names/README.md), which adds
+`ccn <name...>` — start a session named by everything after the word.
+
 > [!WARNING]
 > `ccd` runs Claude with `--dangerously-skip-permissions`, bypassing all
 > permission prompts. It sits one keystroke from the safe `cc` — type it

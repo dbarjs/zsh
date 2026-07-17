@@ -12,7 +12,7 @@ can enable exactly the ones you want and skip the rest.
 |---|---|
 | [`git-aliases`](plugins/git-aliases/README.md) | Short aliases for everyday git commands. |
 | [`claude-aliases`](plugins/claude-aliases/README.md) | Short aliases for the Claude Code CLI. |
-| [`claude-session-names`](plugins/claude-session-names/README.md) | Claude Code sessions auto-named after the working directory. |
+| [`claude-session-names`](plugins/claude-session-names/README.md) | Claude Code session naming — auto from the working directory, `ccn` by hand. |
 | [`ni-aliases`](plugins/ni-aliases/README.md) | Aliases over antfu's `ni` / `nr` tools. |
 | [`history-config`](plugins/history-config/README.md) | zsh command history configuration. |
 | [`read-env`](plugins/read-env/README.md) | `read_env` — load variables from a dotenv file. |
