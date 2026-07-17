@@ -15,6 +15,10 @@ It registers two hooks via `add-zsh-hook`:
 Using `add-zsh-hook` (rather than appending to `precmd_functions`) makes the plugin safe to
 re-source — the hooks are not registered twice.
 
+Note: some full-screen CLIs write their own titles over this plugin's — Claude Code is
+one; see [`claude-session-names`](../claude-session-names/README.md) for making those
+titles informative.
+
 ## Install (Sheldon)
 
 ```toml
